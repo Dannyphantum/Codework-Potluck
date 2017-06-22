@@ -19,12 +19,15 @@
   
   <div class="form-group">
     <input type="text" th:field="*{name}" placeholder="Chef Name"></input>
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
   </div>
  
   <div class="form-group">
     <input type="text" th:field="*{food}" placeholder="Food"></input>
+    <span th:if="${#fields.hasErrors('food')}" th:errors="*{food}">Food Error</span>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
+ 
 </form>
 </body>
 </html>
